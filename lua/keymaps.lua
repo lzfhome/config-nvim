@@ -23,12 +23,30 @@ vim.g.maplocalleader = " "
 nnoremap("<TAB>", ":BufferLineCycleNext<CR>")
 nnoremap("<S-TAB>", ":BufferLineCyclePrev<CR>")
 
--- Splits
+-- Splits v window
 nnoremap("<leader>v", ":vsplit<CR>")
 
--- Telescope
+
+nnoremap("<leader>h","<C-W>h")
+nnoremap("<leader>l","<C-W>l")
+
+
+nnoremap(";","<C-F>")
+nnoremap("'","<C-B>")
+
+-- only this  window
+nnoremap("<leader>o", ":only<CR>")
+
+-- Search File(or string)
 nnoremap("<C-T>", "<Cmd>Telescope find_files<CR>")
 nnoremap("<C-P>", "<Cmd>Telescope live_grep<CR>")
+nnoremap("<C-F>", "<Cmd>Telescope current_buffer_fuzzy_find<CR>")
+
+-- Open buffers and select
+nnoremap("<leader>b", "<Cmd>Telescope buffers<CR>")
 
 -- File explorer
 nnoremap("<leader>e", "<Cmd>NvimTreeToggle<CR>")  -- NvimTree
+
+-- Create a new file
+nnoremap("<leader>n", ":enew<CR>")  -- NvimTree

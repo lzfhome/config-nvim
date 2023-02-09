@@ -1,5 +1,5 @@
 -- Visual
---[[vim.o.conceallevel       = 0                            -- Don't hide quotes in markdown
+--vim.o.conceallevel       = 0                            -- Don't hide quotes in markdown
 vim.o.cmdheight          = 1
 vim.o.pumheight          = 10
 vim.o.showmode           = false
@@ -38,7 +38,7 @@ vim.o.completeopt        = "menuone,noinsert,noselect"
 vim.o.wildmode           = "longest,full"               -- Display auto-complete in Command Mode
 vim.o.updatetime         = 300                          -- Delay until write to Swap and HoldCommand event
 vim.g.do_file_type_lua   = 1
-]]--
+
 
 -- Disable default plugins
 -- vim.g.loaded_netrwPlugin = false                     -- I can't remember what the issue was with this option
