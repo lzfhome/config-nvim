@@ -27,12 +27,41 @@ return require('packer').startup(function(use)
   use({'wbthomason/packer.nvim', opt = true})
 
 
+  -- LSP
+  use "neovim/nvim-lspconfig" -- enable LSP
+  use "williamboman/mason.nvim" -- simple to use language server installer
+  use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
+  use 'jose-elias-alvarez/null-ls.nvim' -- LSP diagnostics and code actions
+
+
+  -- Autocomplete
+  use({
+    "hrsh7th/nvim-cmp",
+    -- Sources for nvim-cmp
+    requires = {
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-nvim-lua",
+      "hrsh7th/cmp-cmdline",
+      "saadparwaiz1/cmp_luasnip",
+    },
+    config = function() require('plugins.cmp') end,
+  })
+
   -- Treesitter
   use({
     'nvim-treesitter/nvim-treesitter',
     config = function() require('plugins.treesitter') end,
     run = ':TSUpdate'
   })
+
+  -- Snippets
+  use {"L3MON4D3/LuaSnip", config = function() require('plugins.snippets') end}
+  use "rafamadriz/friendly-snippets"
+
+  -- Signature help
+  use "ray-x/lsp_signature.nvim"
 
 -- lualine
 use {

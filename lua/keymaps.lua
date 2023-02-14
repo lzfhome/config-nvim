@@ -29,6 +29,8 @@ nnoremap("<leader>v", ":vsplit<CR>")
 
 nnoremap("<leader>h","<C-W>h")
 nnoremap("<leader>l","<C-W>l")
+nnoremap("<leader>j","<C-W>j")
+nnoremap("<leader>k","<C-W>k")
 
 
 nnoremap(";","<C-F>")
