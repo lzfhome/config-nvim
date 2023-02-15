@@ -52,10 +52,13 @@ require('lualine').setup({
         sections = {'error', 'warn', 'info'},
       },
     },
-    lualine_x = {'encoding'},
+    lualine_x = {
+      {'filename'},
+      {function () return '' end},
+      {'encoding'},
+    },
     lualine_y = {'progress'},
     lualine_z = {
-      {function () return '' end},
       {'location'},
     }
   },
