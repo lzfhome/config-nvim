@@ -27,6 +27,11 @@ return require('packer').startup(function(use)
   use({'wbthomason/packer.nvim', opt = true})
 
 
+  use ({
+      'nvim-tree/nvim-web-devicons',
+      config = function() require('plugins.nvim-web-devicons') end,
+    })
+
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/mason.nvim" -- simple to use language server installer
@@ -83,9 +88,7 @@ use {
   -- bufferline
   use({
     'akinsho/bufferline.nvim',
-    requires = 'nvim-tree/nvim-web-devicons',
     config = function() require('plugins.bufferline') end,
-    event = 'BufWinEnter',
   })
 
   -- Telescope
