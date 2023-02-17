@@ -47,6 +47,9 @@ nnoremap("<C-F>", "<Cmd>Telescope current_buffer_fuzzy_find<CR>")
 -- Open buffers and select
 nnoremap("<leader>b", "<Cmd>Telescope buffers<CR>")
 
+-- Tagbar
+nnoremap("<leader>t", "<Cmd>TagbarToggle<CR>")
+
 -- File explorer
 nnoremap("<leader>e", "<Cmd>NvimTreeToggle<CR>")  -- NvimTree
 
