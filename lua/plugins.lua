@@ -32,6 +32,7 @@ return require('packer').startup(function(use)
   use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
   use 'jose-elias-alvarez/null-ls.nvim' -- LSP diagnostics and code actions
 
+  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
 
   -- Autocomplete
   use({
@@ -45,7 +46,6 @@ return require('packer').startup(function(use)
       "hrsh7th/cmp-cmdline",
       "saadparwaiz1/cmp_luasnip",
     },
-    config = function() require('plugins.cmp') end,
   })
 
   -- Treesitter

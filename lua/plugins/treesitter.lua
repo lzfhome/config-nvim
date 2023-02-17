@@ -1,24 +1,27 @@
--- Treesitter configuration
 
-require('nvim-treesitter.configs').setup({
-	highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = false
+
+
+
+
+
+
+
+
+
+
+
+
+
+local configs = require("nvim-treesitter.configs")
+configs.setup {
+  ensure_installed = "all",
+  sync_install = false,
+  ignore_install = { "" }, -- List of parsers to ignore installing
+  highlight = {
+    enable = true, -- false will disable the whole extension
+    disable = { "" }, -- list of language that will be disabled
+    additional_vim_regex_highlighting = true,
+
   },
-  -- We must manually specify which parsers to install
-	ensure_installed = {
-    "bash",
-    "c",
-    "cpp",
-    "cuda",
-		"json",
-    "julia",
-		"lua",
-    "python",
-    "yaml",
-    "vim",
-    "latex",
-    "java",
-    "markdown",
-	},
-})
+  indent = { enable = true, disable = { "yaml" } },
+}
