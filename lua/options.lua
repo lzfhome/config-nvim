@@ -1,3 +1,4 @@
+
 -- Visual
 --vim.o.conceallevel       = 0                            -- Don't hide quotes in markdown
 vim.o.cmdheight          = 1
@@ -58,3 +59,18 @@ vim.diagnostic.config {
   underline = false,
   signs = true,          -- Keep gutter signs
 }
+vim.cmd [[
+if executable('clipboard-provider')
+  let g:clipboard = {
+          \ 'name': 'myClipboard',
+          \     'copy': {
+          \         '+': 'clipboard-provider copy',
+          \         '*': 'clipboard-provider copy',
+          \     },
+          \     'paste': {
+          \         '+': 'clipboard-provider paste',
+          \         '*': 'clipboard-provider paste',
+          \     },
+          \ }
+endif
+]]
