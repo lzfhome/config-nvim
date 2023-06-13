@@ -1,5 +1,6 @@
 
 local servers = {
+  "bashls",
 	"lua_ls",
   "clangd",
   "marksman",
