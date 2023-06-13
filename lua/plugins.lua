@@ -104,6 +104,12 @@ use {
       config = function() require('plugins/tokyonight') end,
     })
 
+-- git-conflict
+use ({
+    'akinsho/git-conflict.nvim',
+    tag = "*",
+    config = function() require('plugins/git-conflict') end,
+  })
 
   if packer_bootstrap then
     require('packer').sync()
