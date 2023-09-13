@@ -70,3 +70,11 @@ if executable('clipboard-provider')
           \ }
 endif
 ]]
+
+-- 在 Lua 配置文件中设置 Python 文件的缩进为4个空格
+vim.cmd[[
+  autocmd FileType python setlocal expandtab
+  autocmd FileType python setlocal shiftwidth=4
+  autocmd FileType python setlocal tabstop=4
+]]
+
